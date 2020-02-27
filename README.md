@@ -1,2 +1,0 @@
-# pinavisconti.github.io
-Portfolio
