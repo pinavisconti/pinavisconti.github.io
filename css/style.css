@@ -48,16 +48,17 @@
 
 /* Body */
 body {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #181818;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #181818;
 }
 
 #container {
 	margin: 0 auto;
-	width: 80%;
+	width: 60%;
 }
 
 #pContent a {
@@ -98,14 +99,53 @@ body {
 }
 
 /* Dotted Line */
-
 hr.dots {border-top: 1px dotted #c2b48f; padding: 0px 0px 0px 0px; margin: 0;}
 
-/* Mobile */
+/* Grid */
+.grid {
+	width: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-gap: 1rem;
+}
 
-@viewport {
-	width: device-width;
-	zoom: 1.0;
+.grid > div {
+	margin: 0 auto;
+}
+
+.grid_img {
+	object-fit:contain;
+	width:100%;
+	border-radius:20px;
+	padding-bottom:5px;
+}
+
+.grid_img_chongus {
+	object-fit:contain;
+	width:100%;
+	border-radius:20px;
+	padding-bottom:5px;
+}
+
+.grid_img_sharpcorners {
+	object-fit:contain;
+	width:100%;
+	border-radius:0px;
+	padding-bottom:5px;
+}
+
+@media all and (max-width:680px) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+
+/* Media */
+#video {
+	width: 80%;
+	padding-bottom: 10px;
 }
 
 .video-responsive{
@@ -121,4 +161,11 @@ hr.dots {border-top: 1px dotted #c2b48f; padding: 0px 0px 0px 0px; margin: 0;}
 	height:100%;
 	width:100%;
 	position:absolute;
+}
+
+/* Mobile */
+
+@viewport {
+	width: device-width;
+	zoom: 1.0;
 }
